@@ -1,0 +1,455 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Primary design header
+//
+// This header should be included by all source files instantiating the design.
+// The class here is then constructed to instantiate the design.
+// See the Verilator manual for examples.
+
+#ifndef _Vccip_std_afu_H_
+#define _Vccip_std_afu_H_
+
+#include "verilated_heavy.h"
+#include "Vccip_std_afu__Inlines.h"
+class Vccip_std_afu__Syms;
+
+//----------
+
+VL_MODULE(Vccip_std_afu) {
+  public:
+    // CELLS
+    // Public to allow access to /*verilator_public*/ items;
+    // otherwise the application code can consider these internals.
+    
+    // PORTS
+    // The application code writes and reads these signals to
+    // propagate new values into/out from the Verilated model.
+    VL_IN8(pClk,0,0);
+    VL_IN8(pClkDiv2,0,0);
+    VL_IN8(pClkDiv4,0,0);
+    VL_IN8(uClk_usr,0,0);
+    VL_IN8(uClk_usrDiv2,0,0);
+    VL_IN8(pck_cp2af_softReset,0,0);
+    VL_IN8(pck_cp2af_pwrState,1,0);
+    VL_IN8(pck_cp2af_error,0,0);
+    VL_INW(pck_cp2af_sRx,573,0,18);
+    VL_OUTW(pck_af2cp_sTx,741,0,24);
+    
+    // LOCAL SIGNALS
+    // Internals; generally not touched by application code
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_reg,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_reg,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_reg,0,0);
+    VL_SIG8(ccip_std_afu__DOT__pck_cp2af_softReset_T1,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__re2ab_RdSent,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__re2xy_go,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__re2xy_Cont,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__re2ab_Mode,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__test_SoftReset,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__re2cr_wrlock_n,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__re2xy_multiCL_len,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__SoftReset_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2af_MmioDout_v,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__RdHdr_valid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrHdr_valid_T1,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrHdr_valid_T2,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrHdr_valid_T3,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrHdr_valid_T4,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_RdAck,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__tx_c0_req_valid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__tx_c1_req_valid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rx_c0_resp_valid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rx_c1_resp_valid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__re2ab_CfgValid_d,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__status_write,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__interrupt_sent,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__send_interrupt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__inact_timeout,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__delay_lfsr,5,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__delay_lfsr1,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rnd_ch_sel,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__penalty_start_f,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__penalty_start,7,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__penalty_end,7,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__dsm_status_wren_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__dsm_status_wren_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__dsm_status_wren_c,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rdreq_type,3,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rnd_rdreq_type,3,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rnd_rdreq_sel,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__cr_rdsel_q,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rnd_ch_type,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rd_ch_type,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__cr_rd_chsel_q,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__wr_ch_type,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__cr_wr_chsel_q,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_AlmFull,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrEn,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__RdHdr_valid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__ab2re_RdLen_q,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__wrreq_type,3,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__test_go,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__sop,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__tx_errorValid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrFence_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrFence_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrSop_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrSop_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrLen_q,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrLen_qq,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__test_stop,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrFence_sent,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__read_only_test,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__test_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__tx_rd_req_len,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rx_wr_resp_fmt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rx_wr_resp_cl_num,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__tx_c0_req_valid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rx_c0_resp_valid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__tx_c1_req_valid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rx_c1_resp_valid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__num_rd_sent,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__num_wr_recvd,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__rd_pend_thresh,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__wr_pend_thresh,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__fifo_ctlin,0,-1);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__dram_v,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__bram_full,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__bram_empty,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_ecc_b,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_wren_reg_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_wren_reg_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b_bypass,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_read_flag_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__good_to_go_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_a_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_b_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_reg,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a2,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_WrEn,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_RdEn,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_TestCmp,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_ErrorValid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_RdLen,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_RdRspValid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_RdRspValid_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_WrRspValid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_WrRspValid_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_WrRspFormat_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_WrRspFormat_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_WrRspCLnum_q,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_WrRspCLnum_qq,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__read_fsm,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__write_fsm,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Wr_go,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ab2l1_WrAlmFull_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ab2l1_WrAlmFull_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__wrCLnum,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__wrCLnum_q,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ram_rdValid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ram_rdValid_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ram_rdValid_qq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ram_rdValid_qqq,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__wrsop,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__wrsop_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__WrReq_tid,6,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__finite_test,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ram_max_index,4,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_ram_reads,7,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__pckd_num_wr_rsp,2,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ab2l1_WrRspFormat,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ab2l1_WrRspValid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ab2l1_RdRspValid,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__FSM_Rd_throttle,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_buff_RdReq,7,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__fsm_read_ctrl,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__fsm_write_ctrl,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff0_status,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff1_status,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff1_status_T1,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff0_rd_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff1_rd_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff0_wr_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff1_wr_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__trigger_rds_done,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Wr_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Wr_cmplt_q,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rd_cmplt,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Read_Buffer_ID,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff0_serviced,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__buff1_serviced,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__CL_ID,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_ecc_b,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_wren_reg_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_wren_reg_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b_bypass,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_read_flag_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__good_to_go_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_a_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_b_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_reg,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a2,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_ecc_b,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_wren_reg_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_wren_reg_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b_bypass,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_read_flag_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__good_to_go_b,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_a_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_b_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_prev,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_reg,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a2,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dw_enable_T1,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dw_enable_T2,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dw_enable_T3,1,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_wren_T1,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_rden_T1,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dout_v_T2,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dout_v_T3,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__feature_id_T2,1,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2af_MmioHdr,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__ab2re_RdTID_q,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__dsm_number,14,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrTID_q,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrTID_qq,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_WrPend,11,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_RdPend,11,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__bram_waddr,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__bram_raddr,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__bram_count,9,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_address_reg_a,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_address_reg_b,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_RdTID,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_RdRsp_q,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__re2ab_RdRsp_qq,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__ab2l1_RdRsp,15,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_RdRsp_buff0,9,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_RdRsp_buff1,9,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_address_reg_a,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_address_reg_b,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_address_reg_a,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_address_reg_b,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_tid_T1,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_tid_T2,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_tid_T3,8,0);
+    VL_SIG16(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_offset_8B_T1,14,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__re2xy_NumLines,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_num_lines,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_inact_thresh,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_ctl,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__re2cr_num_reads,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__re2cr_num_writes,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__re2cr_num_Rdpend,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__re2cr_num_Wrpend,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__re2cr_error,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__ErrorVector,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_Reads,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_Writes,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_ticks_low,19,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_ticks_high,19,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_C0stall,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_C1stall,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__Num_RdCredits,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__inact_cnt,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__cr_ctl,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrAddr_q,19,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrData_dsm,511,0,16);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrDin_q,511,0,16);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__txFifo_WrDin_qq,511,0,16);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_data_reg_a,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_wa,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_wb,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_q_reg_b,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a_x,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a_out_b,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__wa_mult_x,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_original_data_a,555,0,18);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__cread_during_write_mode_mixed_ports,168,0,6);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_numwords_a,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_numwords_b,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i5,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__port_a_bit_count_low,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_RdAddr,19,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__l12ab_ErrorInfo,255,0,8);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_Read_req,19,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_Write_req,19,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Num_Write_rsp,19,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Total_ram_reads,20,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__Total_Num_RdRsp,20,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_data_reg_a,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_wa,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_wb,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a_x,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a_out_b,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__wa_mult_x,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_original_data_a,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__cread_during_write_mode_mixed_ports,168,0,6);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_numwords_a,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_numwords_b,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i5,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__port_a_bit_count_low,31,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_data_reg_a,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_wa,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__temp_wb,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a_x,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_byteena_mask_reg_a_out_b,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__wa_mult_x,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_original_data_a,533,0,17);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__cread_during_write_mode_mixed_ports,168,0,6);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_numwords_a,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_numwords_b,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i5,31,0);
+    VL_SIG(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__port_a_bit_count_low,31,0);
+    VL_SIGW(ccip_std_afu__DOT__pck_cp2af_sRx_T1,573,0,18);
+    VL_SIGW(ccip_std_afu__DOT__pck_af2cp_sTx_T0,741,0,24);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__af2cp_sTxPort_c,741,0,24);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_src_address,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_dst_address,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_cfg,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2re_dsm_base,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__cr2af_MmioDout,63,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__cp2af_sRxPort_T1,573,0,18);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__ds_stat_address,41,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__RdAddr,41,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__WrAddr,41,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_data_write_time_a,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_data_write_time_a,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_data_write_time_a,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_wrdin_T1,63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dout_T3,63,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__ctl_reg[512],0,-1);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__ecc_data[512],1,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__mem_data[512],555,0,18);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__ecc_data[512],1,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__mem_data[512],533,0,17);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__ecc_data[512],1,0);
+    VL_SIGW(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__mem_data[512],533,0,17);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__csr_reg[64],63,0);
+    VL_SIG64(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__afu_csr_dout_T2[2],63,0);
+    
+    // LOCAL VARIABLES
+    // Internals; generally not touched by application code
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT____Vlvbound1,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT____Vlvbound1,0,0);
+    VL_SIG8(ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT____Vlvbound1,0,0);
+    VL_SIG8(__VinpClk__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__VinpClk__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__VinpClk__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vclklast__TOP____VinpClk__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vclklast__TOP____VinpClk__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vclklast__TOP____VinpClk__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vclklast__TOP__pClk,0,0);
+    VL_SIG8(__Vclklast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_reg,0,0);
+    VL_SIG8(__Vclklast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_reg,0,0);
+    VL_SIG8(__Vclklast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_reg,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b_bypass,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_a_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_b_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_requestor__DOT__nlb_writeTx_fifo__DOT__C1Tx_mem__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b_bypass,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_a_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_b_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem0__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_rden_reg_b_bypass,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_write_flag_a,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_a_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_aclr_b_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_a_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_outdata_sclr_b_prev,0,0);
+    VL_SIG8(__Vchglast__TOP__ccip_std_afu__DOT__nlb_lpbk__DOT__inst_arbiter__DOT__test_lpbk1__DOT__rdrsp_mem1__DOT__ram_2port_0__DOT__altera_syncram_component__DOT__i_good_to_write_a,0,0);
+    VL_SIG(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__4__Vfuncout,31,0);
+    VL_SIG(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__6__Vfuncout,31,0);
+    VL_SIG(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__7__Vfuncout,31,0);
+    VL_SIG(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__8__Vfuncout,31,0);
+    VL_SIG(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__9__Vfuncout,31,0);
+    VL_SIG64(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__4__data_8B,63,0);
+    VL_SIG64(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__6__data_8B,63,0);
+    VL_SIG64(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__7__data_8B,63,0);
+    VL_SIG64(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__8__data_8B,63,0);
+    VL_SIG64(__Vfunc_ccip_std_afu__DOT__nlb_lpbk__DOT__inst_nlb_csr__DOT__func_csr_connect_4B__9__data_8B,63,0);
+    
+    // INTERNAL VARIABLES
+    // Internals; generally not touched by application code
+    Vccip_std_afu__Syms*	__VlSymsp;		// Symbol table
+    
+    // PARAMETERS
+    // Parameters marked /*verilator public*/ for use by application code
+    
+    // CONSTRUCTORS
+  private:
+    Vccip_std_afu& operator= (const Vccip_std_afu&);	///< Copying not allowed
+    Vccip_std_afu(const Vccip_std_afu&);	///< Copying not allowed
+  public:
+    /// Construct the model; called by application code
+    /// The special name  may be used to make a wrapper with a
+    /// single model invisible WRT DPI scope names.
+    Vccip_std_afu(const char* name="TOP");
+    /// Destroy the model; called (often implicitly) by application code
+    ~Vccip_std_afu();
+    
+    // USER METHODS
+    
+    // API METHODS
+    /// Evaluate the model.  Application must call when inputs change.
+    void eval();
+    /// Simulation complete, run final blocks.  Application must call on completion.
+    void final();
+    
+    // INTERNAL METHODS
+  private:
+    static void _eval_initial_loop(Vccip_std_afu__Syms* __restrict vlSymsp);
+  public:
+    void __Vconfigure(Vccip_std_afu__Syms* symsp, bool first);
+  private:
+    static QData	_change_request(Vccip_std_afu__Syms* __restrict vlSymsp);
+  public:
+    static void	_combo__TOP__13(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_combo__TOP__7(Vccip_std_afu__Syms* __restrict vlSymsp);
+  private:
+    void	_configure_coverage(Vccip_std_afu__Syms* __restrict vlSymsp, bool first);
+    void	_ctor_var_reset();
+  public:
+    static void	_eval(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_eval_initial(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_eval_settle(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_initial__TOP__6(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_sequent__TOP__11(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_sequent__TOP__2(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_sequent__TOP__3(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_sequent__TOP__4(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_sequent__TOP__5(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_settle__TOP__1(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_settle__TOP__14(Vccip_std_afu__Syms* __restrict vlSymsp);
+    static void	_settle__TOP__8(Vccip_std_afu__Syms* __restrict vlSymsp);
+} VL_ATTR_ALIGNED(128);
+
+#endif  /*guard*/
